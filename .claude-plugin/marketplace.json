@@ -1,0 +1,15 @@
+{
+  "name": "team-requirement-flow",
+  "owner": {
+    "name": "Your Team",
+    "email": "your-team@example.com"
+  },
+  "description": "需求驱动开发流程 Marketplace：包含 team-requirement-flow 工作流插件",
+  "plugins": [
+    {
+      "name": "team-requirement-flow",
+      "source": "./plugins/team-requirement-flow",
+      "description": "需求驱动开发流程：设计文档 → 实施 → 前端接入 → 文档即上下文恢复"
+    }
+  ]
+}

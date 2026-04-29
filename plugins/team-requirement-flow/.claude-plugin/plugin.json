@@ -1,0 +1,26 @@
+{
+  "name": "team-requirement-flow",
+  "description": "需求驱动开发流程：设计文档先行 → 分步实施 → 前端接入文档 → 文档即上下文恢复。把团队工作经验沉淀为 docs/<需求名>/ 的结构化产物，让上下文跨人、跨时间、跨工具持久化。",
+  "version": "1.0.0",
+  "author": {
+    "name": "Your Team",
+    "email": "your-team@example.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "documentation",
+    "requirement",
+    "context-persistence",
+    "design-first"
+  ],
+  "skills": [
+    "./skills/design-doc",
+    "./skills/implement-from-doc",
+    "./skills/frontend-handoff",
+    "./skills/resume-from-doc"
+  ],
+  "agents": [
+    "./agents/doc-reviewer.md"
+  ]
+}
