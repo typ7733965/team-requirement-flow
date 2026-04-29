@@ -1,12 +1,12 @@
 ---
-name: resume-from-doc
-description: 跨会话恢复需求上下文时使用。当用户进入新会话需要继续之前未完成的需求，或接手他人遗留的需求时，
-  本 Skill 通过读取 docs/<需求名>/ 已沉淀的设计方案 + 前端文档 + git 历史，
-  快速重建上下文并输出「需求摘要 / 已完成步骤 / 进行中事项 / 下一步建议」，
-  无需用户从零讲背景。当用户说"接着上次做"/"恢复 xxx 需求"/"续做"等场景时调用。
+description: 跨会话恢复需求上下文。读取 docs/<需求名>/ 设计方案 + 前端文档 + git 历史，输出「需求摘要 / 已完成步骤 / 进行中事项 / 下一步建议」。用户说"接着上次做"/"恢复 xxx 需求"/"续做"时调用。
 argument-hint: "<需求名>"
-allowed-tools: Read Glob Bash(git log:*) Bash(git status:*) Bash(git diff:*) Bash(ls:*)
+allowed-tools: Read, Glob, Bash
 ---
+
+参数：$ARGUMENTS
+
+
 
 # 任务
 

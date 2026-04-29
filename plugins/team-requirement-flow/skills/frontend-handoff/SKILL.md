@@ -1,13 +1,12 @@
 ---
-name: frontend-handoff
-description: 后端实施完成后使用。基于 docs/<需求名>/ 下的设计方案与已有代码，
-  生成「前端接入步骤」文档，目标是减少后端与前端的沟通成本。文档包含：
-  全景流程图、阶段分解（配置/接入/对接）、接口速查表、错误码与处理建议、
-  环境约定（设备号/区号等）、联调 FAQ、Checklist。
-  当用户说"生成前端文档"/"给前端写接入步骤"等场景时调用。
+description: 后端实施完成后调用。基于 docs/<需求名>/ 设计方案与已有代码，生成「前端接入步骤」文档（全景流程图/阶段分解/接口速查/错误码处理/环境约定/联调FAQ/Checklist）。用户说"生成前端文档"/"给前端写接入步骤"时调用。
 argument-hint: "<需求名> [--lang zh|en]"
-allowed-tools: Read Grep Glob Write Bash(ls:*)
+allowed-tools: Read, Grep, Glob, Write, Bash
 ---
+
+参数：$ARGUMENTS
+
+
 
 # 任务
 

@@ -1,11 +1,12 @@
 ---
-name: implement-from-doc
-description: 设计方案敲定后使用。读取 docs/<需求名>/ 下的设计方案，按"实施步骤拆分"章节
-  逐步推进开发实施。每一步独立验证、独立 commit，避免上下文污染与回滚困难。
-  当用户说"开始实施"/"按方案来"/"做下一步"等场景时调用。
+description: 设计方案敲定后调用。读取 docs/<需求名>/ 设计方案，按"实施步骤拆分"逐步推进开发。每一步独立验证、独立 commit。用户说"开始实施"/"按方案来"/"做下一步"时调用。
 argument-hint: "<需求名> [step=N]"
-allowed-tools: Read Grep Glob Edit Write Bash(git:*) Bash(go:*) Bash(npm:*) Bash(python:*) Bash(cargo:*) Bash(make:*) Bash(mkdir:*) Bash(ls:*)
+allowed-tools: Read, Grep, Glob, Edit, Write, Bash
 ---
+
+参数：$ARGUMENTS
+
+
 
 # 任务
 

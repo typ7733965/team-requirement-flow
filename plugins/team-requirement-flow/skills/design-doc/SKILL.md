@@ -1,12 +1,12 @@
 ---
-name: design-doc
-description: 接到新需求或新功能时使用。在 docs/<需求名>/ 目录下生成结构化「设计方案」文档，
-  包含需求与目标、整体架构、数据模型、接口设计、错误码、关键决策、实施步骤拆分、风险与回滚等。
-  设计方案是后续实施和跨人协作的 single source of truth，也是下一次迭代的上下文载体。
-  当用户说"我要做一个新需求"/"先写个设计方案"/"梳理一下方案再开发"等场景时，调用本 Skill。
+description: 接到新需求时调用。在 docs/<需求名>/ 目录下生成结构化「设计方案」文档，含需求目标/整体架构/数据模型/接口设计/错误码/关键决策/实施步骤拆分/风险回滚。设计方案是后续实施和跨人协作的 single source of truth。用户说"我要做一个新需求"/"先写个设计方案"/"梳理方案再开发"时调用。
 argument-hint: "<需求名> [--lang zh|en]"
-allowed-tools: Read Grep Glob Write Bash(mkdir:*) Bash(ls:*) Bash(git status:*) Bash(git log:*)
+allowed-tools: Read, Grep, Glob, Write, Bash
 ---
+
+参数：$ARGUMENTS
+
+
 
 # 任务
 
