@@ -73,41 +73,65 @@ docs/
 
 ## 三、安装
 
-### 方式 1：从本 Marketplace 安装（推荐）
+> 仓库地址：https://github.com/typ7733965/team-requirement-flow
+
+### 方式 1：从 GitHub 安装（推荐）
+
+在 Claude Code 中依次执行两条斜杠命令：
 
 ```
-/plugin marketplace add <your-team-git-url>
+/plugin marketplace add typ7733965/team-requirement-flow
 /plugin install team-requirement-flow@team-requirement-flow
 ```
 
-### 方式 2：本地开发模式
+> 第 1 条只是把 marketplace 登记上来；**插件本身需要第 2 条才会真正安装**。
+>
+> 如果你希望以图形化方式确认，输入 `/plugin` 打开管理面板，在 Browse 里找到 `team-requirement-flow` 点 Install。
+
+### 方式 2：本地开发模式（仅用于改插件代码）
+
+如果你 fork 了本仓库要在本地改 SKILL，可以直接加载本地路径：
 
 ```bash
-# 在 ~/.claude/settings.json 中添加：
-{
-  "extraKnownMarketplaces": {
-    "team-requirement-flow": {
-      "source": {
-        "source": "local",
-        "path": "/absolute/path/to/team-requirement-flow"
-      }
-    }
-  }
-}
+claude --plugin-dir /absolute/path/to/team-requirement-flow/plugins/team-requirement-flow
 ```
 
-然后：
+修改后在会话内执行 `/reload-plugins` 即可热重载，无需重启 Claude Code。
+
+### 更新
+
+仓库有新版本时：
 
 ```
-/plugin install team-requirement-flow@team-requirement-flow
+/plugin marketplace update team-requirement-flow
+/plugin update team-requirement-flow@team-requirement-flow
+```
+
+更新后建议开新会话以确保最新版本生效。
+
+### 卸载
+
+```
+/plugin uninstall team-requirement-flow@team-requirement-flow
+/plugin marketplace remove team-requirement-flow
 ```
 
 ### 验证安装
 
-进入任何项目，输入 `/`：
+打开 Claude Code 任意项目，输入 `/`，命令面板应能看到（带 `team-requirement-flow:` 前缀）：
 
-- 应能看到 `/team-requirement-flow:design-doc` 等 4 个命令
-- 输入「我要做一个新需求」，Claude 应能自动联想到 `design-doc` Skill
+- `/team-requirement-flow:design-doc`
+- `/team-requirement-flow:implement-from-doc`
+- `/team-requirement-flow:frontend-handoff`
+- `/team-requirement-flow:resume-from-doc`
+
+或试一句自然语言：
+
+```
+我要做一个新需求叫 测试需求
+```
+
+Claude 应自动联想到 `design-doc` Skill 并开始询问需求边界。
 
 ---
 
